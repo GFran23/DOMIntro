@@ -74,10 +74,17 @@ function addButtonClicked() {
 
 function removeButtonClicked() {
    toDelete = document.getElementById(i - 1);
-   console.log(toDelete);
-   body.removeChild(toDelete);
 
-   i--;
+   if(toDelete !== null){
+    console.log(toDelete);
+
+    body.removeChild(toDelete);
+ 
+    i--;
+   } else {
+        window.alert('Nothing to delete');
+   }
+   
    
 }
 
